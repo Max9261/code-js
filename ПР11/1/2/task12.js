@@ -1,30 +1,28 @@
-const body = document.querySelector('body');
-
 const form = document.createElement('form');
-form.classList.add('create-user-form');
+form.className = 'create-user-form';
 
-const userNameLabel = document.createElement('label');
-const userNameInput = document.createElement('input');
-userNameLabel.innerHTML = 'Имя';
-userNameInput.type = 'text';
-userNameInput.name = 'userName';
-userNameInput.placeholder = 'Введите ваше имя';
+const label1 = document.createElement('label');
+label1.innerText = 'Имя';
+const input1 = document.createElement('input');
+input1.type = 'text';
+input1.name = 'userName';
+input1.placeholder = 'Введите ваше имя';
+label1.appendChild(input1);
 
-const passwordLabel = document.createElement('label');
-const passwordInput = document.createElement('input');
-passwordLabel.innerHTML = 'Пароль';
-passwordInput.type = 'password';
-passwordInput.name = 'password';
-passwordInput.placeholder = 'Придумайте пароль';
+const label2 = document.createElement('label');
+label2.innerText = 'Пароль';
+const input2 = document.createElement('input');
+input2.type = 'password';
+input2.name = 'password';
+input2.placeholder = 'Придумайте Пароль';
+label2.appendChild(input2);
 
-const submitButton = document.createElement('button');
-submitButton.type = 'submit';
-submitButton.innerHTML = 'Подтвердить';
+const button = document.createElement('button');
+button.type = 'submit';
+button.innerText = 'Подтвердить';
 
-form.appendChild(userNameLabel);
-form.appendChild(userNameInput);
-form.appendChild(passwordLabel);
-form.appendChild(passwordInput);
-form.appendChild(submitButton);
+form.appendChild(label1);
+form.appendChild(label2);
+form.appendChild(button);
 
-body.appendChild(form);
+document.body.appendChild(form);
